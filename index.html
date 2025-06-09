@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shree Om Dairy Farm</title>
+  <meta name="description" content="Authentic dairy products made fresh daily at Shree Om Dairy Farm. Visit our Vasai outlets or order online via Zomato & Swiggy." />
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="Shree Om Dairy Farm - Authentic Dairy Delights in Vasai" />
+  <meta property="og:description" content="Order handcrafted dairy delights like Shrikhand, Basundi, and Lassi online or visit our Vasai stores." />
+  <meta property="og:image" content="/logo.png" />
+  <meta property="og:url" content="https://www.omdairy.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .bg-primary { background-color: #0D47A1; }
+    .text-primary { color: #0D47A1; }
+    .border-primary { border-color: #0D47A1; }
+    .hover\:bg-primary-dark:hover { background-color: #093170; }
+    img[loading="lazy"] { aspect-ratio: auto; }
+  </style>
+
+  <!-- Google Analytics (optional) -->
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPNSYT31P7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CPNSYT31P7');
+    </script>
+</head>
+<body class="bg-blue-50 text-gray-900 font-sans leading-relaxed">
+<!-- Your entire body content remains the same, enhanced with the optimizations mentioned -->
+<!-- Use loading="lazy" for all <img> and <iframe> -->
+<!-- All <section> and <div data-aos> now use AOS with once:true set -->
+
+  <!-- Navigation -->
+<nav class="bg-primary text-white shadow-md p-4 sticky top-0 z-50" role="navigation" aria-label="Primary navigation">
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
+    
+    <!-- Logo & Brand Name -->
+    <a href="#home" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-white" aria-label="Go to homepage">
+      <img src="/logo.png" alt="Shree Om Dairy Farm Logo" class="h-10 w-auto" loading="lazy" />
+      <span class="text-xl font-extrabold tracking-wide select-none">Shree Om Dairy Farm</span>
+    </a>
+
+    <!-- Mobile menu toggle button (visible on small screens) -->
+    <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu" 
+      class="md:hidden p-2 rounded hover:bg-white hover:bg-opacity-20 focus:outline-none focus:ring-2 focus:ring-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" 
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation links -->
+    <ul id="nav-menu" class="hidden md:flex gap-6 text-sm font-semibold tracking-wide" role="menubar" aria-label="Main menu">
+      <li role="none">
+        <a href="#products" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Products</a>
+      </li>
+      <li role="none">
+        <a href="#gallery" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Gallery</a>
+      </li>
+      <li role="none">
+        <a href="#delivery" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Delivery</a>
+      </li>
+      <li role="none">
+        <a href="#locations" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Stores</a>
+      </li>
+      <li role="none">
+        <a href="#faq" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">FAQ</a>
+      </li>
+      <li role="none">
+        <a href="#contact" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    // Simple mobile menu toggle script
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+</nav>
+
+  <!-- Hero Section -->
+<header class="bg-blue-100 py-20 text-center relative overflow-hidden" data-aos="fade-up" role="banner" aria-label="Shree Om Dairy Farm Hero Section">
+  <div class="absolute top-0 left-0 w-full h-full bg-[url('/dairy-bg.jpg')] bg-cover opacity-10"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-primary mb-4">Welcome to </br>Shree Om Dairy Farm</h1>
+    <p class="text-xl md:text-2xl text-gray-800 mb-3">Where Tradition Meets Purity Since 1991</p>
+    <p class="text-md md:text-lg text-gray-700 mb-6">
+      Experience the finest <strong>dairy delights</strong> – handcrafted with love, <strong>freshness</strong>, and <strong>authenticity</strong>. From our family to yours, every bite tells a story of <strong>quality</strong> and tradition.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://omdairy.petpooja.com/" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-primary-dark transition duration-300" aria-label="Explore Dairy Products">Direct Delivery</a>
+      <a href="https://zomato.omdairy.com" target="_blank" rel="noopener" class="bg-white text-primary border border-primary px-6 py-2 rounded-full font-semibold hover:bg-blue-200 transition duration-300" aria-label="Order on Zomato">Order on Zomato</a>
+      <a href="https://swiggy.omdairy.com" target="_blank" rel="noopener" class="bg-white text-primary border border-primary px-6 py-2 rounded-full font-semibold hover:bg-blue-200 transition duration-300" aria-label="Order on Swiggy">Order on Swiggy</a>
+    </div>
+  </div>
+</header>
+
+  <!-- Products -->
+<section id="products" class="text-center py-16 px-6 bg-white" data-aos="fade-up" aria-label="Signature Dairy Products">
+  <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">🥇 Signature Products</h2>
+  <p class="text-gray-700 max-w-2xl mx-auto text-lg">
+    Explore our bestselling, handcrafted delights made fresh daily with pure ingredients and time-honored recipes.
+  </p>
+  
+  <div class="grid md:grid-cols-4 gap-8 mt-10 max-w-6xl mx-auto">
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
+      <h3 class="text-xl font-semibold text-primary mb-2">🧁 Shrikhand / Mathho</h3>
+      <p class="text-sm text-gray-700">Choose from 12+ creamy, rich flavors like <strong>Kesar Elaichi</strong>, <strong>Mango (Amrakhand)</strong>, <strong>Rajbhog</strong>, <strong>Mix Fruit</strong>, <strong>Strawberry</strong>, and <strong>Kala Jamun</strong>.</p>
+    </div>
+    
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
+      <h3 class="text-xl font-semibold text-primary mb-2">🍮 Basundi</h3>
+      <p class="text-sm text-gray-700">Relish this traditional delight available in <strong>Plain</strong>, <strong>Kesar</strong>, and <strong>Sitafal</strong>.</p>
+    </div>
+    
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
+      <h3 class="text-xl font-semibold text-primary mb-2">🥤 Lassi, Masala Chaas & Piyush</h3>
+      <p class="text-sm text-gray-700">Cool down with our <strong>refreshing, spiced</strong> drinks—perfect for any season and always made fresh.</p>
+    </div>
+
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
+      <h3 class="text-xl font-semibold text-primary mb-2">🥭 Mango Milkshake (Aamras)</h3>
+      <p class="text-sm text-gray-700">Enjoy the king of fruits in its creamiest form — our <strong>Seasonal Special Mango Milkshake</strong> is rich, fresh, and made only with Alphonso mangoes. Limited time only!</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Delivery Options -->
+<section id="delivery" class="bg-blue-100 py-12 md:py-16 px-4 sm:px-6 text-center" data-aos="fade-up" aria-label="Dairy Product Delivery Options">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">🛒 Hassle-Free Delivery Options</h2>
+    <p class="text-base sm:text-lg text-gray-800 mb-6 px-2">
+      Enjoy <strong>fresh, premium-quality dairy products</strong> at your doorstep. Choose your preferred way to order from Shree Om Dairy Farm – fast, safe, and always hygienic.
+    </p>
+    
+    <div class="grid gap-6 md:grid-cols-3 mt-8 text-left">
+      <!-- Direct Order -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 border-2 border-primary">
+        <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2">🚚 Order Direct & Save More</h3>
+        <p class="text-sm sm:text-base text-gray-700">
+          Order online via our <strong>official website</strong> and get <strong>same-day delivery</strong> from our own fleet. Fresher, faster, and with <strong>exclusive in-house offers</strong>.
+        </p>
+        <p class="mt-3 text-sm font-medium text-gray-800">
+          🛒 <a href="https://omdairy.petpooja.com" target="_blank" rel="noopener" class="inline-block text-primary font-semibold underline underline-offset-2 hover:text-blue-800" aria-label="Order on Om Dairy">Order Now →</a>
+        </p>
+      </div>
+
+      <!-- Zomato -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl shadow transition duration-300 opacity-70 hover:opacity-90">
+        <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2">🍽 Also on Zomato</h3>
+        <p class="text-sm sm:text-base text-gray-700">
+          Your favorites are available on Zomato. Ideal for quick orders and app users.
+        </p>
+        <a href="https://zomato.omdairy.com" target="_blank" rel="noopener" class="inline-block mt-3 text-primary font-medium hover:underline" aria-label="Order on Zomato">Zomato →</a>
+      </div>
+
+      <!-- Swiggy -->
+      <div class="bg-white p-5 sm:p-6 rounded-2xl shadow transition duration-300 opacity-70 hover:opacity-90">
+        <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2">🛵 Available on Swiggy</h3>
+        <p class="text-sm sm:text-base text-gray-700">
+          Prefer Swiggy? Find our premium dairy delights there too.
+        </p>
+        <a href="https://swiggy.omdairy.com" target="_blank" rel="noopener" class="inline-block mt-3 text-primary font-medium hover:underline" aria-label="Order on Swiggy">Swiggy →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Product Gallery Section -->
+<section id="gallery" class="py-12 px-4 sm:px-6 bg-white text-center" data-aos="fade-up" aria-label="Shree Om Dairy Product Gallery">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-primary mb-4">🧁 Signature Dairy Delights</h2>
+    <p class="text-base sm:text-lg text-gray-700 mb-8">
+      Discover our most-loved <strong>fresh dairy products</strong> – handcrafted daily at Shree Om Dairy Farm. Experience taste, purity, and tradition in every bite.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <figure class="rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 bg-gray-50 p-2">
+        <img src="https://via.placeholder.com/300x200" alt="Fresh Kesar Shrikhand from Shree Om Dairy" class="rounded-md w-full h-auto" />
+        <figcaption class="mt-2 text-sm text-gray-800 font-medium">Kesar Shrikhand</figcaption>
+      </figure>
+
+      <figure class="rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 bg-gray-50 p-2">
+        <img src="https://via.placeholder.com/300x200" alt="Traditional Gujarati Basundi Dessert" class="rounded-md w-full h-auto" />
+        <figcaption class="mt-2 text-sm text-gray-800 font-medium">Classic Basundi</figcaption>
+      </figure>
+
+      <figure class="rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 bg-gray-50 p-2">
+        <img src="https://via.placeholder.com/300x200" alt="Refreshing Sweet Punjabi Lassi" class="rounded-md w-full h-auto" />
+        <figcaption class="mt-2 text-sm text-gray-800 font-medium">Sweet Lassi</figcaption>
+      </figure>
+
+      <figure class="rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 bg-gray-50 p-2">
+        <img src="https://via.placeholder.com/300x200" alt="Soft and Fresh Homemade Paneer Cubes" class="rounded-md w-full h-auto" />
+        <figcaption class="mt-2 text-sm text-gray-800 font-medium">Fresh Paneer</figcaption>
+      </figure>
+    </div>
+
+    <div class="mt-10">
+      <a href="https://omdairy.petpooja.com" target="_blank" rel="noopener" class="inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-primary-dark transition duration-300" aria-label="Order Dairy Products Online from Shree Om Dairy">
+        🛒 Order Your Favorites Online →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive FAQ Section -->
+<section id="faq" class="bg-blue-100 py-12 px-4" data-aos="fade-up" itemscope itemtype="https://schema.org/FAQPage">
+  <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-8">❓ Frequently Asked Questions</h2>
+
+  <div class="max-w-3xl mx-auto space-y-4">
+
+    <!-- Accordion Item -->
+    <div class="bg-white rounded-xl shadow-sm" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <button class="w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center faq-toggle" aria-expanded="false">
+        <span itemprop="name">What’s the shelf life of your dairy products?</span>
+        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+      <div class="faq-answer hidden px-5 pb-4 text-gray-700" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Our products are made fresh daily with no preservatives. Items like <strong>Shrikhand</strong> and <strong>Basundi</strong> should be consumed within 2–3 days when refrigerated.
+        </p>
+      </div>
+    </div>
+
+    <!-- Accordion Item -->
+    <div class="bg-white rounded-xl shadow-sm" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <button class="w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center faq-toggle" aria-expanded="false">
+        <span itemprop="name">What payment methods do you accept?</span>
+        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+      <div class="faq-answer hidden px-5 pb-4 text-gray-700" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          We accept UPI (Google Pay, PhonePe), cards, cash, and online payments via <strong>omdairy.petpooja.com</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Accordion Item -->
+    <div class="bg-white rounded-xl shadow-sm" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <button class="w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center faq-toggle" aria-expanded="false">
+        <span itemprop="name">Do your products contain any allergens?</span>
+        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+      <div class="faq-answer hidden px-5 pb-4 text-gray-700" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Yes, products contain <strong>milk proteins and lactose</strong>. Please consult us for allergy concerns.
+        </p>
+      </div>
+    </div>
+
+    <!-- Accordion Item -->
+    <div class="bg-white rounded-xl shadow-sm" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <button class="w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center faq-toggle" aria-expanded="false">
+        <span itemprop="name">Where are your stores located?</span>
+        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+      <div class="faq-answer hidden px-5 pb-4 text-gray-700" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          We’re in <strong>Anand Nagar</strong> and <strong>Papdy</strong>, Vasai. See map and timings on the <a href="#contact" class="text-primary underline">Contact Page</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Accordion Item -->
+    <div class="bg-white rounded-xl shadow-sm" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <button class="w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center faq-toggle" aria-expanded="false">
+        <span itemprop="name">Can I return or replace a product?</span>
+        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+      <div class="faq-answer hidden px-5 pb-4 text-gray-700" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          Due to freshness, we don’t offer returns. But if anything’s wrong, we’ll replace it within 2 hours of delivery.
+        </p>
+      </div>
+    </div>
+
+    <!-- Accordion Item -->
+    <div class="bg-white rounded-xl shadow-sm" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+      <button class="w-full text-left p-5 font-semibold text-lg text-primary flex justify-between items-center faq-toggle" aria-expanded="false">
+        <span itemprop="name">How can I track my order?</span>
+        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
+      </button>
+      <div class="faq-answer hidden px-5 pb-4 text-gray-700" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">
+          You’ll get SMS/WhatsApp updates from <a href="https://omdairy.petpooja.com" class="text-primary underline">our website</a>. Or call us anytime to check.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Accordion Script -->
+<script>
+  document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('svg');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      answer.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    });
+  });
+</script>
+
+  <!-- Contact Section -->
+ <section id="contact" class="py-16 px-4 bg-white" data-aos="fade-up" itemscope itemtype="https://schema.org/ContactPage">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-primary mb-4" itemprop="name">
+      📞 Get in Touch with Shree Om Dairy Farm
+    </h2>
+    <p class="text-gray-600 text-base sm:text-lg mb-8" itemprop="description">
+      Have questions, feedback, or a custom order request? We’re here to help! Reach out using the form below or connect with us on social media.
+    </p>
+  </div>
+
+  <form class="max-w-xl mx-auto space-y-5" itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction">
+    <meta itemprop="target" content="https://www.omdairy.com/contact" />
+    
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary" required itemprop="name" />
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary" required itemprop="email" />
+    </div>
+
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary" required itemprop="description"></textarea>
+    </div>
+
+    <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition duration-200">
+      📤 Send Message
+    </button>
+  </form>
+
+  <div class="mt-10 text-center text-gray-600 text-sm">
+    Or message us directly on 
+    <a href="https://whatsapp.omdairy.com" class="text-primary hover:underline">WhatsApp</a> or 
+    <a href="https://instagram.omdairy.com" class="text-primary hover:underline">Instagram</a>
+  </div>
+</section>
+
+  <!-- Map Section -->
+  <section id="locations" class="py-16 bg-blue-50 px-6" data-aos="fade-up" itemscope itemtype="https://schema.org/Store">
+  <div class="max-w-5xl mx-auto text-center mb-10">
+    <h2 class="text-3xl font-extrabold text-primary mb-3" itemprop="name">
+      📍 Visit Our Stores
+    </h2>
+    <p class="text-gray-700 max-w-3xl mx-auto text-lg">
+      Experience the freshness of Shree Om Dairy Farm in person. Visit any of our convenient locations in Vasai to shop your favorite dairy products directly from the source.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <!-- Anand Nagar Branch -->
+    <div class="bg-white p-6 rounded-lg shadow-md" itemprop="hasPOS" itemscope itemtype="https://schema.org/LocalBusiness">
+      <h3 class="text-xl font-semibold text-primary mb-3" itemprop="name">Anand Nagar Branch</h3>
+      <p class="text-gray-600 mb-4" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Anand Nagar</span>, <span itemprop="addressLocality">Vasai</span>, <span itemprop="addressRegion">Maharashtra</span>, <span itemprop="postalCode">401202</span>
+      </p>
+      <iframe
+        src="https://www.google.com/maps?q=Anand+Nagar,+Vasai&output=embed"
+        class="w-full h-64 rounded-lg border-0 shadow-sm"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Map showing location of Anand Nagar Branch"
+        itemprop="geo"
+        itemscope
+        itemtype="https://schema.org/GeoCoordinates"
+      >
+      </iframe>
+    </div>
+
+    <!-- Papdy Branch -->
+    <div class="bg-white p-6 rounded-lg shadow-md" itemprop="hasPOS" itemscope itemtype="https://schema.org/LocalBusiness">
+      <h3 class="text-xl font-semibold text-primary mb-3" itemprop="name">Papdy Branch</h3>
+      <p class="text-gray-600 mb-4" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Papdy</span>, <span itemprop="addressLocality">Vasai</span>, <span itemprop="addressRegion">Maharashtra</span>, <span itemprop="postalCode">401202</span>
+      </p>
+      <iframe
+        src="https://www.google.com/maps?q=Papdy,+Vasai&output=embed"
+        class="w-full h-64 rounded-lg border-0 shadow-sm"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Map showing location of Papdy Branch"
+        itemprop="geo"
+        itemscope
+        itemtype="https://schema.org/GeoCoordinates"
+      >
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="bg-primary text-white text-center py-8 px-4" role="contentinfo" aria-label="Footer with social media and copyright information">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-lg font-semibold mb-3 tracking-wide" aria-label="Follow Shree Om Dairy Farm on social media">
+      🔔 Stay Connected with Shree Om Dairy Farm
+    </h2>
+
+    <p class="mb-4 text-sm md:text-base max-w-md mx-auto leading-relaxed">
+      Follow us on WhatsApp, Instagram, and Facebook for the latest updates, exclusive offers, and fresh product announcements.
+    </p>
+
+    <nav class="flex justify-center space-x-6 text-3xl" aria-label="Social media links">
+      <a href="https://wa.me/+919422480690" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" class="hover:text-green-400 transition-colors duration-300">
+        <i class="ph ph-whatsapp-logo"></i>
+      </a>
+      <a href="https://instagram.com/shreeomdairy" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="hover:text-pink-400 transition-colors duration-300">
+        <i class="ph ph-instagram-logo"></i>
+      </a>
+      <a href="https://facebook.com/shreeomdairy" target="_blank" rel="noopener noreferrer" aria-label="Like us on Facebook" class="hover:text-blue-500 transition-colors duration-300">
+        <i class="ph ph-facebook-logo"></i>
+      </a>
+    </nav>
+
+    <p class="mt-6 text-xs md:text-sm text-gray-200">
+      &copy; 2025 <span itemprop="copyrightHolder" itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="name">Shree Om Dairy Farm</span>
+      </span>. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-out',
+  });
+</script>
+</body>
+</html>
