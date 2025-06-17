@@ -577,7 +577,7 @@
     </p>
   </div>
 
-  <form class="max-w-xl mx-auto space-y-5" itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction">
+  <form action="https://formspree.io/f/myzjpzky" method="POST" class="max-w-xl mx-auto space-y-5" class="max-w-xl mx-auto space-y-5" itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction">
     <meta itemprop="target" content="https://www.omdairy.com/contact" />
     
     <div>
@@ -595,15 +595,31 @@
       <textarea id="message" name="message" rows="5" placeholder="Type your message here..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary" required itemprop="description"></textarea>
     </div>
 
+     <!-- 💡 Spam protection field -->
+    <input type="text" name="_honey" style="display:none">
+
+    <!-- Disable default Formspree redirect -->
+    <input type="hidden" name="_redirect" value="">
+
     <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition duration-200">
       📤 Send Message
     </button>
   </form>
 
+   <div id="success-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60">
+    <div class="bg-white rounded-lg shadow-xl max-w-md mx-auto p-6 text-center">
+      <h3 class="text-2xl font-semibold text-green-600 mb-3">✅ Message Sent!</h3>
+      <p class="text-gray-700 mb-4">Thank you for contacting Shree Om Dairy Farm. We’ll get back to you soon!</p>
+      <button onclick="document.getElementById('success-modal').classList.add('hidden')" class="bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg">
+        Close
+      </button>
+    </div>
+  </div>
+
   <div class="mt-10 text-center text-gray-600 text-sm">
     Or message us directly on 
-    <a href="https://wa.me/91XXXXXXXXXX" class="text-primary hover:underline">WhatsApp</a> or 
-    <a href="https://www.instagram.com/shreeomdairyfarm" class="text-primary hover:underline">Instagram</a>
+    <a href="https://whatsapp.omdairy.com" class="text-primary hover:underline">WhatsApp</a> or 
+    <a href="https://instagram.omdairy.com" class="text-primary hover:underline">Instagram</a>
   </div>
 </section>
 
@@ -694,6 +710,36 @@
     const isClickInside = navMenu.contains(event.target) || toggleButton.contains(event.target);
     if (!isClickInside && window.innerWidth < 768) {
       navMenu.classList.add('hidden');
+    }
+  });
+</script>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const modal = document.getElementById('success-modal');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        modal.classList.remove('hidden');
+      } else {
+        alert('Oops! Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      alert('Error submitting form. Please check your connection.');
     }
   });
 </script>
