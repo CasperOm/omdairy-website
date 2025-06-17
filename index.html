@@ -183,24 +183,17 @@
     </ul>
   </div>
 
-  <script>
+<script>
   const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
   navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('open');
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('hidden');
   });
 </script>
-  <!-- <script>
-    // Simple mobile menu toggle script
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-      navToggle.setAttribute('aria-expanded', !expanded);
-      navMenu.classList.toggle('hidden');
-    });
-  </script> -->
 </nav>
 
   <!-- Hero Section -->
