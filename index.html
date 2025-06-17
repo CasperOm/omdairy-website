@@ -672,25 +672,29 @@
 </script>
 
 <script>
-  // Toggle mobile menu visibility
   const navMenu = document.getElementById('nav-menu');
   const toggleButton = document.getElementById('menu-toggle');
 
-  // Function to close menu on link click (only in mobile view)
-  const closeMenuOnClick = () => {
-    if (window.innerWidth < 768) {
-      navMenu.classList.add('hidden'); // Hide menu
-    }
-  };
-
-  // Attach click event to each nav link
-  document.querySelectorAll('#nav-menu a').forEach(link => {
-    link.addEventListener('click', closeMenuOnClick);
+  // Toggle the menu open/close
+  toggleButton?.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
   });
 
-  // Toggle menu manually (optional)
-  toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
+  // Close menu when a nav link is clicked (on mobile only)
+  document.querySelectorAll('#nav-menu a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navMenu.classList.add('hidden');
+      }
+    });
+  });
+
+  // Optional: Close menu on outside click (mobile only)
+  document.addEventListener('click', (event) => {
+    const isClickInside = navMenu.contains(event.target) || toggleButton.contains(event.target);
+    if (!isClickInside && window.innerWidth < 768) {
+      navMenu.classList.add('hidden');
+    }
   });
 </script>
 </body>
