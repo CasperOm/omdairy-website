@@ -111,6 +111,14 @@
   </div>
 
   <script>
+  const navToggle = document.getElementById('nav-toggle');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !expanded);
+  });
+</script>
+  <!-- <script>
     // Simple mobile menu toggle script
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -119,7 +127,7 @@
       navToggle.setAttribute('aria-expanded', !expanded);
       navMenu.classList.toggle('hidden');
     });
-  </script>
+  </script> -->
 </nav>
 
   <!-- Hero Section -->
@@ -531,15 +539,6 @@
     duration: 1000,
     once: true,
     easing: 'ease-out',
-  });
-</script>
-   
-<script>
-  const navToggle = document.getElementById('nav-toggle');
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', !expanded);
   });
 </script>
 </body>
