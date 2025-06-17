@@ -671,5 +671,28 @@
     });
   });
 </script>
+
+<script>
+  // Toggle mobile menu visibility
+  const navMenu = document.getElementById('nav-menu');
+  const toggleButton = document.getElementById('menu-toggle');
+
+  // Function to close menu on link click (only in mobile view)
+  const closeMenuOnClick = () => {
+    if (window.innerWidth < 768) {
+      navMenu.classList.add('hidden'); // Hide menu
+    }
+  };
+
+  // Attach click event to each nav link
+  document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', closeMenuOnClick);
+  });
+
+  // Toggle menu manually (optional)
+  toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+  });
+</script>
 </body>
 </html>
