@@ -764,7 +764,6 @@
       });
 
       if (response.ok) {
-        form.reset();
         modal.classList.remove('hidden');
       } else {
         alert('Oops! Something went wrong. Please try again later.');
@@ -773,6 +772,11 @@
       alert('Error submitting form. Please check your connection.');
     }
   });
+
+  function closeModalAndResetForm() {
+    modal.classList.add('hidden');
+    form.reset();
+  }
 </script>
 </body>
 </html>
