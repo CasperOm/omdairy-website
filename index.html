@@ -47,15 +47,6 @@
       gtag('js', new Date());
       gtag('config', 'G-CPNSYT31P7');
     </script>
-
-    <script>
-      const navToggle = document.getElementById('nav-toggle');
-      navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('open');
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !expanded);
-      });
-    </script>
 </head>
 <body class="bg-blue-50 text-gray-900 font-sans leading-relaxed">
 <!-- Your entire body content remains the same, enhanced with the optimizations mentioned -->
@@ -540,6 +531,15 @@
     duration: 1000,
     once: true,
     easing: 'ease-out',
+  });
+</script>
+   
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !expanded);
   });
 </script>
 </body>
