@@ -78,35 +78,108 @@
       <span class="block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-[6px]"></span>
     </button>
 
-    <!-- Navigation links -->
-    <ul id="nav-menu" class="hidden md:flex gap-6 text-sm font-semibold tracking-wide" role="menubar" aria-label="Main menu">
+   <!-- Navigation links with SVG icons -->
+    <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row gap-4 text-sm font-semibold tracking-wide md:items-center" role="menubar" aria-label="Main menu">
+    
       <li role="none">
-        <a href="#products" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Products</a>
+        <a href="#products" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 13V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6M5 18h14a2 2 0 002-2v-3H3v3a2 2 0 002 2z"></path>
+          </svg>
+          <span>Products</span>
+        </a>
       </li>
+    
       <li role="none">
-        <a href="#gallery" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Gallery</a>
+        <a href="#gallery" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 5h18M3 19h18M5 7h14v10H5z"></path>
+          </svg>
+          <span>Gallery</span>
+        </a>
       </li>
+    
       <li role="none">
-        <a href="#delivery" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Delivery</a>
+        <a href="#delivery" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3h13v13H3z M16 8h5l-2-3h-3z"></path>
+          </svg>
+          <span>Delivery</span>
+        </a>
       </li>
-       <li role="none">
-        <a href="#loyalty" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Loyalty</a>
-      </li>
-       <li role="none">
-        <a href="#subscription" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Subscription</a>
-      </li>
+    
       <li role="none">
-        <a href="#locations" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Stores</a>
+        <a href="#loyalty" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-yellow-300 hover:text-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 17.27L18.18 21l-1.63-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.45 4.73L5.82 21z"></path>
+          </svg>
+          <span>Loyalty</span>
+        </a>
       </li>
+    
       <li role="none">
-        <a href="#faq" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">FAQ</a>
+        <a href="#subscription" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-green-300 hover:text-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 9V7a5 5 0 00-10 0v2H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2v-9a2 2 0 00-2-2h-2z"></path>
+          </svg>
+          <span>Subscription</span>
+        </a>
       </li>
+    
       <li role="none">
-        <a href="#contact" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Contact Us</a>
+        <a href="#locations" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 6 7 13 7 13s7-7 7-13c0-3.87-3.13-7-7-7z"></path>
+          </svg>
+          <span>Stores</span>
+        </a>
       </li>
+    
       <li role="none">
-        <a href="https://knowmore.omdairy.com/" role="menuitem" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white" tabindex="0">Know More</a>
+        <a href="#faq" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 20h.01M12 4a8 8 0 018 8c0 3.86-2.69 6.26-6 6.92v1.58h-4v-1.58c-3.31-.66-6-3.06-6-6.92a8 8 0 018-8z"></path>
+          </svg>
+          <span>FAQ</span>
+        </a>
       </li>
+    
+      <li role="none">
+        <a href="#contact" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white hover:bg-white/10 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 10.5V6a2 2 0 00-2-2H5a2 2 0 00-2 2v4.5M21 10.5l-9 6-9-6M21 10.5V18a2 2 0 01-2 2H5a2 2 0 01-2-2v-7.5"></path>
+          </svg>
+          <span>Contact</span>
+        </a>
+      </li>
+    
+      <li role="none">
+        <a href="https://knowmore.omdairy.com/" target="_blank" role="menuitem" tabindex="0"
+           class="flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 text-white bg-white/10 hover:bg-white text-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4v1m6.364 1.636l-.707.707M20 12h-1M6.343 6.343l-.707.707M4 12H3m1.636 6.364l.707-.707M12 20v-1m6.364-1.636l-.707-.707M4.343 17.657l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+          </svg>
+          <span>Know More</span>
+        </a>
+      </li>
+    
     </ul>
   </div>
 
