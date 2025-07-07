@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://www.omdairy.com/assets/og-image.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/logo.png" type="image/x-icon" />
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -117,10 +117,23 @@
       <img src="logo.png" alt="Shree Om Dairy Farm Logo" class="h-10 w-12 rounded-xl object-cover" loading="lazy" />
       <span class="text-xl font-extrabold tracking-wide select-none">Shree Om Dairy Farm<sup>®</sup></span>
     </a>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button id="nav-toggle"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation menu"
+      class="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
     
     <!-- Mobile menu toggle button (visible on small screens) -->
     <!-- Animated Navbar Toggle Button -->
-    <button id="menu-toggle"
+    <!-- <button id="menu-toggle"
       aria-controls="nav-menu"
       aria-expanded="false"
       aria-label="Toggle navigation menu"
@@ -131,7 +144,7 @@
       <span class="block w-6 h-0.5 bg-white mb-1 transition-opacity duration-200 ease-in-out group-[.open]:opacity-0"></span>
       <!-- Bottom Bar -->
       <span class="block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-[6px]"></span>
-    </button>
+    </button> -->
 
    <!-- Navigation links with SVG icons -->
   <!-- Navigation Menu -->
@@ -746,6 +759,27 @@
 </script>
 
 <script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !expanded);
+  });
+
+  // Close menu on link click (mobile only)
+  document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        navMenu.classList.add('hidden');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
+
+<script>
   // Hide nav on click (mobile only)
   document.querySelectorAll('#nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
@@ -778,43 +812,17 @@
   });
 </script>
 
-<!-- Sticky CTA: Mobile Bottom -->
-<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white shadow-inner border-t border-gray-200 flex justify-around items-center py-2">
-  <!-- WhatsApp -->
-  <a href="https://wa.me/919422480690?text=Hi%2C%20I%20want%20to%20place%20an%20order%20with%20Shree%20Om%20Dairy%20Farm"
-     class="flex flex-col items-center text-green-600 hover:text-green-700 text-sm font-medium" aria-label="Order on WhatsApp">
-    <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.52 3.48A12.07..."></path>
-    </svg>
-    WhatsApp
-  </a>
-
-  <!-- Zomato -->
-  <a href="https://zomato.omdairy.com" target="_blank" class="flex flex-col items-center text-rose-600 hover:text-rose-700 text-sm font-medium" aria-label="Order on Zomato">
-    <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M3 3h18a1 1 0 0 1 1 1v3H2V4a1 1..."/>
-    </svg>
-    Zomato
-  </a>
-
-  <!-- Reviews -->
-  <a href="#reviews" class="flex flex-col items-center text-yellow-600 hover:text-yellow-700 text-sm font-medium" aria-label="Read Google Reviews">
-    <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 17.27L18.18 21l-1.64-7..."/>
-    </svg>
-    Reviews
-  </a>
-</div>
-
-<!-- Sticky CTA: Desktop Right -->
-<div class="hidden md:flex flex-col fixed right-4 bottom-20 z-40 space-y-4 animate-fade-in">
+<!-- Sticky CTA: Mobile Only -->
+<div class="flex md:hidden flex-col fixed right-4 bottom-20 z-40 space-y-4 animate-fade-in">
   <!-- WhatsApp -->
   <a href="https://wa.me/919422480690?text=Hi%20I%20want%20to%20order" target="_blank"
      class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg>
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20 3.5A10.5 10.5 0 0 0 3.4 18.8L2 22l3.3-1.3A10.5 10.5 0 1 0 20 3.5zm-8 17a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-2.5.9.8-2.4-.2-.3A8.5 8.5 0 1 1 12 20.5zm4.5-6.4c-.2-.1-1.4-.7-1.6-.7s-.3 0-.5.2l-.7.8c-.1.1-.3.2-.5.1-.6-.3-2.4-1.3-3.1-3.6-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3 0-.5s-.5-1.2-.7-1.6c-.2-.3-.5-.2-.7-.2h-.6c-.2 0-.5.1-.7.3-.7.6-1.1 1.3-1 2.1.1 1 .7 2.5 2.1 3.7 1.3 1.3 3 2 4.3 2 .6 0 1.2-.1 1.7-.4.5-.3 1.1-1.1 1.2-1.5.1-.4 0-.5-.2-.6z" />
+    </svg>
     WhatsApp
   </a>
-  
+
   <!-- Order Now -->
   <a href="https://omdairy.petpooja.com" target="_blank"
      class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition font-semibold text-sm">
