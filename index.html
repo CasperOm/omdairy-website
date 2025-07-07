@@ -182,6 +182,7 @@
 </header>
 
   <!-- Products -->
+<!-- Products -->
 <section id="products" class="scroll-mt-26 md:scroll-mt-[92px] text-center py-16 px-6 bg-white" data-aos="fade-up" aria-label="Signature Dairy Products">
   <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">🥇 Signature Products</h2>
   <p class="text-gray-700 max-w-2xl mx-auto text-lg">
@@ -189,10 +190,13 @@
   </p>
   
   <div class="grid md:grid-cols-4 gap-8 mt-10 max-w-6xl mx-auto">
-    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
-        <meta itemprop="name" content="Shrikhand" />
-      <h3 class="text-xl font-semibold text-primary mb-2" temprop="name">🧁 Shrikhand / Mathho</h3>
-      <p class="text-sm text-gray-700">Choose from 12+ creamy, rich flavors like <strong>Kesar Elaichi</strong>, <strong>Mango (Amrakhand)</strong>, <strong>Rajbhog</strong>, <strong>Mix Fruit</strong>, <strong>Strawberry</strong>, and <strong>Kala Jamun</strong>.</p>
+    <!-- Shrikhand -->
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300" itemscope itemtype="https://schema.org/Product">
+      <h3 class="text-xl font-semibold text-primary mb-2" itemprop="name">🧁 Shrikhand / Mathho</h3>
+      <p class="text-sm text-gray-700" itemprop="description">
+        Choose from 12+ rich varieties like <strong>Kesar Elaichi</strong>, <strong>Mango (Amrakhand)</strong>, <strong>Rajbhog</strong>, <strong>Mix Fruit</strong>, <strong>Strawberry</strong>, and <strong>Kala Jamun</strong>.
+      </p>
+      <meta itemprop="image" content="https://www.omdairy.com/assets/shrikhand.jpg" />
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -215,11 +219,14 @@
       }
       </script>
     </div>
-    
-    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
-        <meta itemprop="name" content="Basundi" />
-      <h3 class="text-xl font-semibold text-primary mb-2" temprop="name">🍮 Basundi</h3>
-      <p class="text-sm text-gray-700">Relish this traditional delight available in <strong>Plain</strong>, <strong>Kesar</strong>, and <strong>Sitafal</strong>.</p>
+
+    <!-- Basundi -->
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300" itemscope itemtype="https://schema.org/Product">
+      <h3 class="text-xl font-semibold text-primary mb-2" itemprop="name">🍮 Basundi</h3>
+      <p class="text-sm text-gray-700" itemprop="description">
+        Relish this traditional delight available in <strong>Plain</strong>, <strong>Kesar</strong>, and <strong>Sitafal</strong>.
+      </p>
+      <meta itemprop="image" content="https://www.omdairy.com/assets/basundi.jpg" />
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -242,13 +249,14 @@
       }
       </script>
     </div>
-    
-    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
-        <meta itemprop="name" content="Lassi" />
-        <meta itemprop="name" content="Masala Chaas" />
-        <meta itemprop="name" content="Piyush" />
-      <h3 class="text-xl font-semibold text-primary mb-2" temprop="name">🥤 Lassi, Masala Chaas & Piyush</h3>
-      <p class="text-sm text-gray-700">Cool down with our <strong>refreshing, spiced</strong> drinks—perfect for any season and always made fresh.</p>
+
+    <!-- Lassi, Chaas, Piyush -->
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300" itemscope itemtype="https://schema.org/Product">
+      <h3 class="text-xl font-semibold text-primary mb-2" itemprop="name">🥤 Lassi, Masala Chaas & Piyush</h3>
+      <p class="text-sm text-gray-700" itemprop="description">
+        Cool down with our <strong>refreshing, spiced</strong> drinks—perfect for any season and always made fresh.
+      </p>
+      <meta itemprop="image" content="https://www.omdairy.com/assets/lassi-chaas-piyush.jpg" />
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -272,11 +280,13 @@
       </script>
     </div>
 
-    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300">
-      <meta itemprop="name" content="Aamras" />
-      <meta itemprop="name" content="Mango Milkshake" />
-      <h3 class="text-xl font-semibold text-primary mb-2" temprop="name">🥭 Mango Milkshake (Aamras)</h3>
-      <p class="text-sm text-gray-700">Enjoy the king of fruits in its creamiest form — our <strong>Seasonal Special Mango Milkshake</strong> is rich, fresh, and made only with Alphonso mangoes. Limited time only!</p>
+    <!-- Mango Milkshake / Aamras -->
+    <div class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300" itemscope itemtype="https://schema.org/Product">
+      <h3 class="text-xl font-semibold text-primary mb-2" itemprop="name">🥭 Mango Milkshake (Aamras)</h3>
+      <p class="text-sm text-gray-700" itemprop="description">
+        Enjoy the king of fruits in its freshest form — our <strong>Seasonal Mango Milkshake</strong> is rich, pure, and made only with Alphonso mangoes. Limited time only!
+      </p>
+      <meta itemprop="image" content="https://www.omdairy.com/assets/mango-milkshake.jpg" />
       <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
@@ -300,28 +310,6 @@
       </script>
     </div>
   </div>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Shrikhand (Kesar Elaichi, Mango, Rajbhog)",
-    "image": "https://www.omdairy.com/assets/shrikhand.jpg",
-    "description": "Freshly made Shrikhand in various traditional fruit options. No preservatives. Made daily.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Shree Om Dairy Farm"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://omdairy.petpooja.com",
-      "priceCurrency": "INR",
-      "price": "95",
-      "itemCondition": "https://schema.org/NewCondition",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
 </section>
 
   <!-- Delivery Options -->
