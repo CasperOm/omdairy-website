@@ -62,13 +62,24 @@
   </script>
 
   <!-- Smooth Scroll Behavior -->
-  <style>
-    html { scroll-behavior: smooth; }
-    .bg-primary { background-color: #0D47A1; }
-    .text-primary { color: #0D47A1; }
-    .border-primary { border-color: #0D47A1; }
-    .hover\:bg-primary-dark:hover { background-color: #093170; }
-  </style>
+ <style>
+  html { scroll-behavior: smooth; }
+
+  .bg-primary { background-color: #0D47A1; }
+  .text-primary { color: #0D47A1; }
+  .border-primary { border-color: #0D47A1; }
+  .hover\:bg-primary-dark:hover { background-color: #093170; }
+
+  /* 👇 Add this animation for Sticky CTA */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+</style>
 </head>
 <body class="bg-blue-50 text-gray-900 font-sans leading-relaxed">
 <!-- Your entire body content remains the same, enhanced with the optimizations mentioned -->
@@ -591,6 +602,36 @@
   });
 </script>
 
+<script>
+  window.addEventListener('scroll', () => {
+    const sticky = document.querySelector('.animate-fade-in');
+    if (window.scrollY > 300) {
+      sticky.style.display = 'flex';
+    } else {
+      sticky.style.display = 'none';
+    }
+  });
+</script>
+
+  <!-- Reviews Section -->
+<section id="reviews" class="py-14 px-4 bg-white text-center" data-aos="fade-up" aria-label="Customer Reviews from Google and Zomato">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">🌟 What Our Customers Say</h2>
+    <p class="text-gray-700 text-lg mb-8 max-w-3xl mx-auto">
+      Real reviews from happy customers across <strong>Google</strong> and <strong>Zomato</strong> for our Anand Nagar & Papdy outlets.
+      We’re proud of the trust we’ve earned since 1991.
+    </p>
+
+    <!-- TrustIndex Widget Embed -->
+    <div class="max-w-5xl mx-auto">
+      <div class="ti-widget ti-goog ti-zomato" data-ti-id="599063f4925352236116c4ae564"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TrustIndex Script -->
+<script defer async src="https://cdn.trustindex.io/loader.js?599063f4925352236116c4ae564"></script>
+
   <!-- Contact Section -->
  <section id="contact" class="scroll-mt-20 md:scroll-mt-24 py-16 px-4 bg-white" data-aos="fade-up" itemscope itemtype="https://schema.org/ContactPage">
   <div class="max-w-2xl mx-auto text-center">
@@ -774,5 +815,55 @@
     form.reset();
   }
 </script>
+
+<!-- Sticky CTA: Mobile Bottom -->
+<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white shadow-inner border-t border-gray-200 flex justify-around items-center py-2">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919422480690?text=Hi%2C%20I%20want%20to%20place%20an%20order%20with%20Shree%20Om%20Dairy%20Farm"
+     class="flex flex-col items-center text-green-600 hover:text-green-700 text-sm font-medium" aria-label="Order on WhatsApp">
+    <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A12.07..."></path>
+    </svg>
+    WhatsApp
+  </a>
+
+  <!-- Zomato -->
+  <a href="https://zomato.omdairy.com" target="_blank" class="flex flex-col items-center text-rose-600 hover:text-rose-700 text-sm font-medium" aria-label="Order on Zomato">
+    <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M3 3h18a1 1 0 0 1 1 1v3H2V4a1 1..."/>
+    </svg>
+    Zomato
+  </a>
+
+  <!-- Reviews -->
+  <a href="#reviews" class="flex flex-col items-center text-yellow-600 hover:text-yellow-700 text-sm font-medium" aria-label="Read Google Reviews">
+    <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 17.27L18.18 21l-1.64-7..."/>
+    </svg>
+    Reviews
+  </a>
+</div>
+
+<!-- Sticky CTA: Desktop Right -->
+<div class="hidden md:flex flex-col fixed right-4 bottom-20 z-40 space-y-4 animate-fade-in">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919422480690?text=Hi%20I%20want%20to%20order" target="_blank"
+     class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg>
+    WhatsApp
+  </a>
+  
+  <!-- Order Now -->
+  <a href="https://omdairy.petpooja.com" target="_blank"
+     class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition font-semibold text-sm">
+    Order Now
+  </a>
+
+  <!-- Review -->
+  <a href="#reviews" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-full shadow-lg font-medium text-sm transition">
+    ★ Reviews
+  </a>
+</div>
+  
 </body>
 </html>
