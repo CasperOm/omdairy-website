@@ -63,12 +63,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Petpooja Direct Ordering -->
-  <url>
-    <loc>https://omdairy.petpooja.com/</loc>
-    <priority>0.5</priority>
-  </url>
-
   <!-- Zomato -->
   <url>
     <loc>https://zomato.omdairy.com/</loc>
@@ -93,15 +87,4 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Anand Nagar Google Maps -->
-  <url>
-    <loc>https://maps.app.goo.gl/cp9BziVqwH8U5JJz9</loc>
-    <priority>0.4</priority>
-  </url>
-
-  <!-- Papdy Google Maps -->
-  <url>
-    <loc>https://maps.app.goo.gl/x78LLTuyng14qMJr5</loc>
-    <priority>0.4</priority>
-  </url>
 </urlset>
